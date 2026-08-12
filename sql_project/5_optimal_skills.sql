@@ -7,7 +7,7 @@ Goal:
 - focus on job postings with a specified salary
 
 Why?
-- target skills tat offer job security and financial benefits
+- target skills that offer job security and financial benefits
 - offer insights into career development in any of these dat roles
 */
 SELECT
