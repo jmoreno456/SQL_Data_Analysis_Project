@@ -75,7 +75,7 @@ ORDER BY
 - **Salary Range:** Data Analysts roles range from $170k - $337k. Data Engineering roles range from $242k - $325k. Data Scientist roles range from $280k - $550k. 
 - **Data Roles:** Data Scientists and Data Engineering roles have higher end salaries as compared to Data Analysts. Data Scientists being the highest paid job title for these remote roles in the United States.
 
-![Top Paying Jobs](assets/Top_Paying_Jobs.png)
+![Top Paying Jobs](assets/1_Top_Paying_Jobs.png)
 
 
 ### 2. Skills Required
@@ -129,13 +129,13 @@ ORDER BY
 - **Put Together:** The data shows that all 3 roles share skills such as SQL and Python, while cloud platforms and database technologies were also required.
 
 **Data Analyst Results:**
-![Data Analyst](assets/DA_skills_required.png)
+![Data Analyst](assets/2_DA_skills_required.png)
 
 **Data Engineer Results:**
-![Data Engineer](assets/DE_skills_required.png)
+![Data Engineer](assets/3_DE_skills_required.png)
 
 **Data Scientist Results:**
-![Data Scientist](assets/DS_skills_required.png)
+![Data Scientist](assets/4_DS_skills_required.png)
 
 
 ### 3. Most in-demand skills
@@ -164,7 +164,7 @@ ORDER BY
 - **Cloud:** from the results, there were 3 notable cloud platforms such as AWS, Azure, and Snowflake which appeared in the top ten rows. This result was not surprising as the three roles I am comparing has data as its main component.
 - **Visual:** Other notable skills which appeared in many different job postings were visualization tools such as Tableau and PowerBI.
 
-![in-demand skills](assets/demand_count.png)
+![in-demand skills](assets/5_demand_count.png)
 
 
 ### 4. Top Paying Skills
