@@ -211,7 +211,7 @@ For data scientists, the highest paid skill was go and bigquery, go appeared in 
 
 
 ### 5. What are the most optimal skills to learn
-For this task, I wanted to combine my thought process from section 3 and 4. So, I put together the most in-demand skills with the highest average salary skills. This would help me determine which skills were the most optimal to learn. The goal was to show which skills offer job security and financial benefits. I did this by using the aggregation count to get the count of each skill and then i paired it with with the average salary. sorting this data will show me which skills were the most optimal
+For this task, I wanted to combine my thought process from section 3 and 4. So, I put together the most in-demand skills with the highest average salary skills. This would help me determine which skills were the most optimal to learn. The goal was to show which skills offer job opportunities and financial benefits. I did this by using the aggregation count to get the count of each skill and then i paired it with with the average salary. sorting this data will show me which skills were the most optimal for the three chosen data roles of Data analyst, Data engineers, and Data scientists.
 
 ```sql
 SELECT
@@ -236,6 +236,19 @@ ORDER BY
     avg_salary DESC;
 ```
 
-# What I learned
+**Results:**
+- **Optimal Skills:** After retrieving the results I learned that the ten most optimal skills were SQL, Python, R, AWS, Tableau, Azure, Excel, Spark, Snowflake, and Power BI. these skills have a high demand count which means they are required for the 3 data roles. they appeared in many job postings.
+- **Salary based:** The results also showed the skills with average salaries above $100k. This is a good average to show financial security. 
+- **Final:** The results showed that these skills and tools are optimal and recommended to learn. This will help in career development but also helps guide college students look to enter the data world.
 
-# Conclusions
+![Optimal-Skills](assets/9_optimal_skills.png)
+
+# What I learned
+- This project helped strengthened my ability to use JOINs as the dataset was composed of 4 tables (job_postings_fact, company_dim, skills_dim, skills_job_dim)
+- I learned how to use CTEs and Window functions to help me break down the dataset and compare 3 different roles instead of using just one.
+- I improved my knowledge of aggregation methods such as COUNT(), AVG(), HAVING.
+- Learned how to turn business questions into SQL queries and used the data to help drive my conclusions
+- I learned how to compare skill demand with salary based skills to help identify skills that provide strong job security and financial opportunity
+
+# Conclusion
+This analysis provided insights into the relationship between skills and remote job opportunities in the United States for roles such as Data Analyst, Data Engineers, and Data Scientists. I achieved this by analyzing job postings, salaries, and required skills. I was able to identify the high-paying roles and then build upon that question and learned which skills were related to these high-salaried positions. It led me to finding the most in-demand skills and the skills with the highest average salary. I was able to finish my analysis by combining these results into finding the most optimal skills.
