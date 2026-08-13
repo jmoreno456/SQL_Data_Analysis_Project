@@ -1,5 +1,5 @@
 # Introduction
-This project focuses on the data job market. I will be looking into top-paying jobs, in-demand skills, and where high demand meets high salary in positions such as Data Analyst, Data Scientist, and Data Engineers.
+This project focuses on the data job market. I will be looking into top-paying jobs, in-demand skills, and where high demand meets high salary in positions such as Data Analyst, Data Scientist, and Data Engineer.
 
 SQL queries? Check them out here: [sql_project folder](/sql_project/)
 
@@ -12,10 +12,10 @@ The questions I wanted to answer in this project are as follows:
 5. What are the most optimal skills to learn?
 
 # Tools I used
-For my deep dive into this data analysis on the data job market, I used several tools:
+For my deep dive into the data job market, I used several tools:
 
 - **SQL:** I used SQL to query the database and help me establish critical insights.
-- **PostgreSQL:** I chose postgres as my database management system for its modern capabilities for handling the job posting data.
+- **PostgreSQL:** I chose postgreSQL as my database management system for its modern capabilities for handling the job posting data.
 - **Visual Studio Code:** I used VSCode as my go-to to execute SQL queries.
 - **Git & GitHub:** Essential for version control and sharing my SQL scripts and analysis.
 
@@ -23,7 +23,7 @@ For my deep dive into this data analysis on the data job market, I used several 
 Each query in this project was used for investigating specific aspects of the data job market.
 
 ### 1. Top-Paying Jobs
-To identify the top paying Data Analyst, Data Scientist, Data Engineering roles, I filtered these roles by average yearly salary and location. I focused on remote jobs in the United States. This query shows the high paying opportunites in the field.
+To identify the top-paying Data Analyst, Data Scientist, Data Engineer roles, I filtered these roles by average yearly salary and location. I focused on remote jobs in the United States. This query shows the high-paying opportunities in the field.
 
 ```sql
 WITH
@@ -72,14 +72,14 @@ ORDER BY
 ```
 
 **Results:**
-- **Salary Range:** Data Analysts roles range from $170k - $337k. Data Engineering roles range from $242k - $325k. Data Scientist roles range from $280k - $550k. 
-- **Data Roles:** Data Scientists and Data Engineering roles have higher end salaries as compared to Data Analysts. Data Scientists being the highest paid job title for these remote roles in the United States.
+- **Salary Range:** Data Analyst roles range from $170k - $337k. Data Engineering roles range from $242k - $325k. Data Scientist roles range from $280k - $550k. 
+- **Data Roles:** Data Scientist and Data Engineer roles have higher end salaries as compared to Data Analysts. Data Scientists being the highest-paid job title for these remote roles in the United States.
 
 ![Top Paying Jobs](assets/1_Top_Paying_Jobs.png)
 
 
 ### 2. Skills Required
-The goal here was to determine which skills were required for the high salaried roles for Data Analysts, Data Scientists, and Data Engineers. I used a ranking system to show me the highest paid roles, then I joined two different tables (skills_dim, skills_job_dim) to my fact table (job_postings_fact). By joining, this allowed me to see which skills were required for the high salary roles.
+The goal here was to determine which skills were required for the high salaried roles for Data Analysts, Data Scientists, and Data Engineers. I used a ranking system to show me the highest-paid roles, then I joined two different tables (skills_dim, skills_job_dim) to my fact table (job_postings_fact). By joining, this allowed me to see which skills were required for the high-salary roles.
 
 ```sql
 WITH
@@ -139,7 +139,7 @@ ORDER BY
 
 
 ### 3. Most in-demand skills
-I wanted to see how many times each skill appeared in job postings, this would help me determine which skills are in-demand for Data Analyst, Data Engineering, and Data Scientist positions. I used an aggregation of count to get the total times each skill appeared for each job posting. I used more joins to connect the skills table to my main table. Then i grouped by skills from the skills table, then I ordered the result by count. Remember, these are for remote roles in the united states.
+I wanted to see how many times each skill appeared in job postings. This would help me determine which skills are in-demand for Data Analyst, Data Engineering, and Data Scientist positions. I used an aggregation of count to get the total times each skill appeared for each job posting. I used more joins to connect the skills table to my main table. Then I grouped by skills from the skills table, then I ordered the result by count. Remember, these are for remote roles in the United States.
 
 ```sql
 SELECT
@@ -161,14 +161,14 @@ ORDER BY
 
 **Results:** 
 - **Skills:** The skill with the highest count in the results was SQL appearing in 10,866 job postings. A close second was Python appearing in 10,271 job postings.
-- **Cloud:** from the results, there were 3 notable cloud platforms such as AWS, Azure, and Snowflake which appeared in the top ten rows. This result was not surprising as the three roles I am comparing has data as its main component.
+- **Cloud:** From the results, there were 3 notable cloud platforms such as AWS, Azure, and Snowflake which appeared in the top ten rows. This result was not surprising as the three roles I am comparing have data as its main component.
 - **Visual:** Other notable skills which appeared in many different job postings were visualization tools such as Tableau and PowerBI.
 
 ![in-demand skills](assets/5_demand_count.png)
 
 
 ### 4. Top Paying Skills
-In this section, I wanted to ask a different question, which skills are the highest paid. I looked at average salaries across these skills for the three data roles I have been comparing this entire project (Data Analyst, Data Engineers, Data Scientists). This will be able to help someone determine which skills to learn and figure at which of those skills are most rewarding. In this query, I used a count to get a number of each job positions and i paired it with a having clause just to keep the result shorter, then I decied to round the salary to amke it look cleaner, then i joined the necessary tables of skills and job postings table. I filtered for remote jobs in the united states and then i ordered the data by salary in descending order.
+In this section, I wanted to ask a different question: which skills are the highest-paid? I looked at average salaries across these skills for the three data roles I have been comparing this entire project (Data Analyst, Data Engineers, Data Scientists). This will help someone determine which skills to learn and figure out which of those skills are most rewarding. In this query, I used a count to get a number of each job position and I paired it with a having clause just to keep the result shorter, then I decied to round the salary to make it look cleaner, then I joined the necessary tables of skills and job postings table. I filtered for remote jobs in the united states and then I ordered the data by salary in descending order.
 
 ```sql
 SELECT
@@ -196,9 +196,9 @@ ORDER BY
 ```
 
 **Results:**
-- **first look:** There was a lot to unpack from the results. such as the highest paid skill for a Data analyst was hadoop at an average salary of $119,012. however, hadoop only appeared in 20 jobs. for example, SQL appeared in 371 Data analyst jobs and averaged a salary of $97,656. 
-For data engineers, the highest paid skill was numpy appearing in only 11 job postings with an average salary of $166,027. SQL appeared in a higher number of job postings than data analyst roles. for data engineers, SQL appeared in 457 postings with an average salary of $131,566. 
-For data scientists, the highest paid skill was go and bigquery, go appeared in 45 jobs postings while bigquery appeared in only 29 postings. Python was the skill that appeared in most data science roles at 608 with an average salary of $143,586.
+- **First Look:** There was a lot to unpack from the results. such as the highest paid skill for a Data analyst was hadoop at an average salary of $119,012. However, Hadoop only appeared in 20 jobs. For example, SQL appeared in 371 Data Analyst jobs and averaged a salary of $97,656. 
+For Data Engineers, the highest paid skill was numpy appearing in only 11 job postings with an average salary of $166,027. SQL appeared in a higher number of job postings than Data Analyst roles. For Data Engineers, SQL appeared in 457 postings with an average salary of $131,566. 
+For Data Scientists, The highest paid skill was GO and BigQuery, GO appeared in 45 jobs postings while BigQuery appeared in only 29 postings. Python was the skill that appeared in most data science roles at 608 with an average salary of $143,586.
 
 **Data Analyst Results:**
 ![Data-Analyst](assets/6_DA_skills_highest_salary.png) 
@@ -211,7 +211,7 @@ For data scientists, the highest paid skill was go and bigquery, go appeared in 
 
 
 ### 5. What are the most optimal skills to learn
-For this task, I wanted to combine my thought process from section 3 and 4. So, I put together the most in-demand skills with the highest average salary skills. This would help me determine which skills were the most optimal to learn. The goal was to show which skills offer job opportunities and financial benefits. I did this by using the aggregation count to get the count of each skill and then i paired it with with the average salary. sorting this data will show me which skills were the most optimal for the three chosen data roles of Data analyst, Data engineers, and Data scientists.
+For this task, I wanted to combine my thought process from sections 3 and 4. So, I put together the most in-demand skills with the skills that had the highest average salary. This would help me determine which skills were the most optimal to learn. The goal was to show which skills offer job opportunities and financial benefits. I did this by using the aggregation count to get the count of each skill and then I paired it with with the average salary. Sorting this data will show me which skills were the most optimal for the three chosen data roles of Data Analyst, Data Engineer, and Data Scientist.
 
 ```sql
 SELECT
@@ -237,18 +237,24 @@ ORDER BY
 ```
 
 **Results:**
-- **Optimal Skills:** After retrieving the results I learned that the ten most optimal skills were SQL, Python, R, AWS, Tableau, Azure, Excel, Spark, Snowflake, and Power BI. these skills have a high demand count which means they are required for the 3 data roles. they appeared in many job postings.
+- **Optimal Skills:** After retrieving the results I learned that the ten most optimal skills were SQL, Python, R, AWS, Tableau, Azure, Excel, Spark, Snowflake, and Power BI. These skills have a high demand count which means they are required for the 3 data roles. they appeared in many job postings.
 - **Salary based:** The results also showed the skills with average salaries above $100k. This is a good average to show financial security. 
 - **Final:** The results showed that these skills and tools are optimal and recommended to learn. This will help in career development but also helps guide college students look to enter the data world.
 
 ![Optimal-Skills](assets/9_optimal_skills.png)
 
+# Key Findings
+- Data Scientist roles had the highest average salary among the three roles analyzed
+- SQL and Python were the most in-demand skills across the three roles
+- Some less  frequently requested skills had high average salaries but low demand, demostrating the importance of considering both salary and job demand
+- Combining demand and salary helped identify skills with a stronger balance between earning potential and market demand
+
 # What I learned
-- This project helped strengthened my ability to use JOINs as the dataset was composed of 4 tables (job_postings_fact, company_dim, skills_dim, skills_job_dim)
-- I learned how to use CTEs and Window functions to help me break down the dataset and compare 3 different roles instead of using just one.
+- This project helped strengthen my ability to use JOINs as the dataset was composed of 4 tables (job_postings_fact, company_dim, skills_dim, skills_job_dim)
+- I learned how to use CTEs and window functions to help me break down the dataset and compare 3 different roles instead of using just one.
 - I improved my knowledge of aggregation methods such as COUNT(), AVG(), HAVING.
-- Learned how to turn business questions into SQL queries and used the data to help drive my conclusions
+- I learned how to turn business questions into SQL queries and used the data to help drive my conclusions
 - I learned how to compare skill demand with salary based skills to help identify skills that provide strong job security and financial opportunity
 
 # Conclusion
-This analysis provided insights into the relationship between skills and remote job opportunities in the United States for roles such as Data Analyst, Data Engineers, and Data Scientists. I achieved this by analyzing job postings, salaries, and required skills. I was able to identify the high-paying roles and then build upon that question and learned which skills were related to these high-salaried positions. It led me to finding the most in-demand skills and the skills with the highest average salary. I was able to finish my analysis by combining these results into finding the most optimal skills.
+This analysis provided insights into the relationship between skills and remote job opportunities in the United States for roles such as Data Analyst, Data Engineer, and Data Scientist. I achieved this by analyzing job postings, salaries, and required skills. I was able to identify the high-paying roles and then build upon that question and learned which skills were related to these high-salaried positions. It led me to find the most in-demand skills and the skills with the highest average salary. I was able to finish my analysis by combining these results into finding the most optimal skills.
